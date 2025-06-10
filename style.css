@@ -1,5 +1,6 @@
 html,
 body {
+    all: unset;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,21 +16,25 @@ body {
         radial-gradient(ellipse 117.76% 55.61% at 50% 100%, white 43%, #d9ebff 75%, #a8d1ff 100%),
         #d6f0ff;
 }
+
 p,
 span,
 h1,
 h2,
 h3,
 h4,
+a,
 div {
     all: unset;
     font-family: 'SF Pro Rounded Regular';
 }
+
 @font-face {
     font-family: 'SF Pro Rounded Regular';
     src: url(/IMAGES//SFRounded-Ultralight.woff2);
     font-style: bold;
 }
+
 .WebPageHeader {
     display: flex;
     height: 62px;
@@ -43,6 +48,7 @@ div {
     justify-content: center;
 
 }
+
 .HeadBox {
     display: flex;
     justify-content: space-between;
@@ -56,10 +62,11 @@ div {
     backdrop-filter: blur(7px);
 
 }
+
 .HeadBox div {
     display: flex;
-    align-items: center;
 }
+
 .YimmyLogo {
     display: flex;
     width: 110px;
@@ -68,9 +75,11 @@ div {
     align-items: center;
     gap: 8px;
 }
+
 .options-header:hover>div {
     opacity: 1;
 }
+
 .options-header {
     all: unset;
     cursor: pointer;
@@ -81,6 +90,7 @@ div {
     border-radius: 30px;
     overflow: hidden;
 }
+
 .ButtonTest {
     display: flex;
     all: unset;
@@ -96,6 +106,7 @@ div {
     border-bottom: 0;
     text-decoration: none;
 }
+
 .TasteFree {
     color: #FFF;
     font-size: 15px;
@@ -103,6 +114,82 @@ div {
     line-height: 20px;
     letter-spacing: 0.1px;
     text-decoration: 0;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+li a,
+.dropdown-menu {
+    display: inline-block;
+    text-align: center;
+
+    text-decoration: none;
+
+}
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-menu__content {
+    width: 852px;
+    height: 428px;
+    padding: var(--spacing-s-6, 24px);
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background: var(--yimi-day-bg-light, #FFF);
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    top: 70px;
+}
+
+.dropdown-menu__content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+
+}
+
+.dropdown:hover .dropdown-menu__content {
+
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cont-info {
+    width: 273px;
+    height: 216px;
+    max-height: max-content;
+    display: flex;
+    min-width: 240px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    justify-content: flex-end;
+}
+
+.img-dropdown {
+    width: 20px;
+    height: 20px;
 }
 
 .intro {
@@ -115,6 +202,18 @@ div {
     padding-right: 87px;
     width: 1071px;
 }
+
+.top-info {
+    color: var(--yimi-day-text-brand, #0051FF);
+    font-family: "SF Pro Rounded";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    /* 133.333% */
+    letter-spacing: 0.1px;
+}
+
 .content {
     display: flex;
     justify-content: space-evenly;
@@ -127,6 +226,7 @@ div {
     max-width: 1160px;
     padding: 40px 0;
 }
+
 .tittle {
     gap: var(--spacing-s-10, 16px);
     height: 232px;
@@ -137,6 +237,7 @@ div {
     align-items: flex-start;
     flex: 1 0 0;
 }
+
 .taqueria {
     display: flex;
     align-items: center;
@@ -152,6 +253,7 @@ div {
     height: 24px;
 
 }
+
 .pedidos {
     align-items: stretch;
     color: #1D222B;
@@ -161,6 +263,7 @@ div {
     line-height: 52px;
     font-family: 'SF Pro Rounded Regular';
 }
+
 .comanda {
     align-self: stretch;
     color: #1D222B;
@@ -171,6 +274,7 @@ div {
     letter-spacing: 0.5px;
 
 }
+
 .containerButtons {
     display: flex;
     justify-content: center;
@@ -182,6 +286,7 @@ div {
     text-decoration: none;
     margin-left: -5%;
 }
+
 .btn-start {
     all: unset;
     cursor: pointer;
@@ -195,6 +300,7 @@ div {
     border-bottom: 0;
     text-decoration: none;
 }
+
 .tstart {
     color: var(--yimi-day-text-inverse, #FFF);
     align-items: center;
@@ -203,6 +309,7 @@ div {
     line-height: 20px;
     letter-spacing: 0.1px;
 }
+
 .demo {
     all: unset;
     cursor: pointer;
@@ -215,6 +322,7 @@ div {
     border-bottom: 0;
     text-decoration: none;
 }
+
 .tdemo {
     display: flex;
     align-items: center;
@@ -224,6 +332,7 @@ div {
     line-height: 20px;
     letter-spacing: 0.1px;
 }
+
 .cont-img {
     display: flex;
     margin: auto;
@@ -233,6 +342,7 @@ div {
     height: 460px;
     position: relative;
 }
+
 .imgRestaurant {
     display: flex;
     width: 560px;
@@ -241,8 +351,9 @@ div {
     position: absolute;
     z-index: 0;
 }
+
 .imgMenu {
-    display: flex; 
+    display: flex;
     width: 313px;
     height: 219px;
     padding: 4px;
@@ -256,12 +367,3 @@ div {
     background: #000;
     box-shadow: 4.105px 4.105px 10.263px 0px rgba(0, 0, 0, 0.35), 16.421px 16.421px 30.79px 0px rgba(0, 0, 0, 0.25);
 }
-
-
-
-
-
-
-
-
-
