@@ -24,9 +24,17 @@ h2,
 h3,
 h4,
 a,
-div {
+div,
+button,
+li,
+ul,
+article {
     all: unset;
     font-family: 'SF Pro Rounded Regular';
+}
+
+.button {
+    cursor: pointer;
 }
 
 @font-face {
@@ -89,6 +97,22 @@ div {
     gap: 4px;
     border-radius: 30px;
     overflow: hidden;
+    font-family: "SF Pro Rounded";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
+.options-header:hover {
+    color: var(--yimi-day-text-brand, #0051FF);
+    text-align: center;
+    font-family: "SF Pro Rounded";
+    font-size: 17px;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: 0.15px;
 }
 
 .ButtonTest {
@@ -128,7 +152,6 @@ li a,
 .dropdown-menu {
     display: inline-block;
     text-align: center;
-
     text-decoration: none;
 
 }
@@ -139,17 +162,8 @@ li.dropdown {
 }
 
 .dropdown-menu__content {
-    width: 852px;
     height: 428px;
-    padding: var(--spacing-s-6, 24px);
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    background: var(--yimi-day-bg-light, #FFF);
-    display: none;
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -158,29 +172,36 @@ li.dropdown {
     transition: opacity 0.2s ease, visibility 0.2s ease;
     pointer-events: none;
     top: 70px;
+    width: 852px;
+    padding: var(--spacing-s-6, 24px);
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px var(--spacing-s-4, 16px);
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background: var(--yimi-day-bg-light, #FFF);
 }
 
 .dropdown-menu__content a {
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
     text-align: left;
+    align-items: center;
 
 }
 
 .dropdown:hover .dropdown-menu__content {
-
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
 }
+
+
 
 .cont-info {
     width: 273px;
     height: 216px;
     max-height: max-content;
     display: flex;
-    min-width: 240px;
     flex-direction: column;
     align-items: flex-start;
     flex: 1 0 0;
@@ -188,8 +209,37 @@ li.dropdown {
 }
 
 .img-dropdown {
-    width: 20px;
-    height: 20px;
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid #EDEFF2;
+}
+
+.icon-cont {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-info {
+    display: flex;
+    width: 256px;
+    height: 38px;
+    padding: 4px;
+    border: 8px;
+    gap: 8px;
+    color: var(--yimi-day-text-primary, #333B48);
+    font-family: "SF Pro Rounded";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 20px;
+    letter-spacing: 0.1px;
 }
 
 .intro {
@@ -208,10 +258,11 @@ li.dropdown {
     font-family: "SF Pro Rounded";
     font-size: 15px;
     font-style: normal;
-    font-weight: 600;
     line-height: 20px;
-    /* 133.333% */
     letter-spacing: 0.1px;
+    width: 256px;
+    padding: 4px;
+    font-weight: 600;
 }
 
 .content {
@@ -225,6 +276,88 @@ li.dropdown {
     width: 100%;
     max-width: 1160px;
     padding: 40px 0;
+}
+
+.cont-frame {
+    display: flex;
+    min-width: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    border-radius: 20px;
+}
+
+.drop-frame {
+    width: 852px;
+    height: 164px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 20px;
+    border: 1px solid var(--yimi-day-border-border-20, #EDEFF2);
+    background: var(--yimi-day-bg-light, #FFF);
+    overflow: hidden;
+}
+
+.element {
+    height: 140px;
+    width: 189px;
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+    border: 1px solid var(--yimi-day-border-border-20, #EDEFF2);
+    background: var(--yimi-day-bg-light, #FFF);
+}
+
+.frame-img {
+    width: 100px;
+    height: 100px;
+}
+
+.frame-text {
+    color: var(--yimi-day-text-primary, #333B48);
+    font-family: "SF Pro Rounded";
+    font-size: 17px;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
+.dropdown-menu__content_bussines {
+    height: 360px;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    top: 70px;
+    padding: var(--spacing-s-6, 24px);
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px var(--spacing-s-4, 16px);
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background: var(--yimi-day-bg-light, #FFF);
+}
+
+.dropdown:hover .dropdown-menu__content_bussines {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-menu__content_bussines a {
+    text-decoration: none;
+    text-align: left;
+    align-items: center;
+
 }
 
 .tittle {
@@ -321,6 +454,73 @@ li.dropdown {
     margin-left: 15px;
     border-bottom: 0;
     text-decoration: none;
+}
+
+.top-info_bussines {
+    display: flex;
+    padding: 4px 8px 8px 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--yimi-day-border-border-20, #EDEFF2);
+    color: var(--yimi-day-text-brand, #0051FF);
+    font-family: "SF Pro Rounded";
+    font-size: 15px;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    font-weight: 600;
+}
+
+.cont-info_food {
+    display: flex;
+    width: 240px;
+    height: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.icon-cont_food {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: var(--border-b-rad-2, 8px);
+    background: var(--yimi-day-bg-light-brand, #F4F6FD);
+}
+
+.img-dropdown_bussines {
+    width: 24px;
+    height: 24px;
+}
+
+.cont-info_mayoristas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    width: 480px;
+    height: 312px;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 280px;
+    width: 480px;
+}
+
+.menu-info_bussines {
+    display: flex;
+    min-width: 240px;
+    padding: var(--spacing-s-2, 8px);
+    align-items: center;
+    gap: var(--spacing-s-2, 8px);
+    flex: 1 0 0;
+    border-radius: var(--border-b-rad-2, 8px);
 }
 
 .tdemo {
