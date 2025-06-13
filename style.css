@@ -880,7 +880,7 @@ li.dropdown {
     overflow: hidden;
     position: relative;
     width: 1060px;
-    height: 180px;
+    height: 190px;
 }
 
 .carousel {
@@ -1015,4 +1015,180 @@ li.dropdown {
 .img_ministars {
     width: 16px;
     height: 16px;
+}
+
+.prices {
+    display: flex;
+    width: 1100px;
+    height: 846px;
+    max-width: 1100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.tittle-prices {
+    display: flex;
+    max-width: 1160px;
+    padding: 0px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-s-3, 12px);
+    align-self: stretch;
+    height: 44px;
+}
+
+.tittle-prices_text {
+    align-self: stretch;
+    color: var(--yimi-day-text-tertiary, #1D222B);
+    text-align: center;
+    font-family: "SF Pro Rounded";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    /* 122.222% */
+}
+
+.mensual_plans {
+    display: flex;
+    width: 1168px;
+    height: 678px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background_plans{
+    width: 1496px;
+height: 440px;
+position: absolute;
+    padding-top: 35px;
+}
+
+.plans {
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    width: 1168px;
+    height: 568px;
+}
+
+.tab_plans {
+    z-index: 999;
+    display: flex;
+    padding-bottom: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    width: 1168px;
+    height: 92px;
+}
+
+.pill_tab_plans {
+    width: 192px;
+    height: 44px;
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid var(--yimi-day-border-border-10, #F2F3F6);
+    background: var(--yimi-day-bg-light, #FFF);
+    box-shadow: 0px 2px 6px 0px rgba(42, 50, 63, 0.10);
+}
+
+.button_tab_small {
+    cursor: pointer;
+    display: flex;
+    width: 52px;
+    height: 20px;
+    padding: 8px 14px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 18px;
+    background: var(--yimi-day-text-primary, #333B48);
+}
+
+.text_button_tab_small {
+    width: 52px;
+    height: 16px;
+    color: var(--yimi-day-bg-light, #FFF);
+    font-family: "SF Pro Rounded";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+}
+
+.button_tab_medium {
+    cursor: pointer;
+    display: flex;
+    width: 36px;
+    height: 16px;
+    padding-right: 7px;
+    padding-left: 14px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 18px;
+    background: var(--yimi-day-bg-light, #FFF);
+}
+
+.text_button_tab_medium {
+    color: var(--yimi-day-btn-text, #333B48);
+    font-family: "SF Pro Rounded";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+}
+
+.discount_tab_medium {
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 20px;
+    background: var(--yimi-day-primaries-yellow, #F4C440);
+}
+
+.text_button_tab_medium {
+    color: var(--yimi-day-text-tertiary, #1D222B);
+    font-family: "SF Pro Rounded";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+}
+
+.plus,
+.premium,
+.vip {
+    display: flex;
+    width: 280px;
+    height: 586px;
+    min-width: 280px;
+    max-width: 320px;
+    padding: var(--spacing-s-4, 16px) var(--spacing-s-6, 24px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-s-4, 16px);
+    border-radius: 20px;
+    border: 1px solid var(--yimi-day-border-border-10, #F2F3F6);
+    background: var(--yimi-day-bg-light, #FFF);
+
+    /* System-shadow-2 */
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
